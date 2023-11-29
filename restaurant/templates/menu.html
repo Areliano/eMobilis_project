@@ -1,0 +1,333 @@
+{% extends 'common.html' %}
+
+{% load static %}
+
+{% block body %}
+
+
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('{% static 'images/bg_4.jpg' %}');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center" style="background: #ffc4c4" >
+            <h1 class="mb-2 bread">Specialties</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Menu <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+{% for menu in menu %}
+<section class="ftco-section" style="background: #ffc4c4">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+          	<span class="subheading">{{ menu.name }}</span>
+            <h2 class="mb-4">{{ menu.heading }}</h2>
+          </div>
+        </div>
+        <div class="row">
+        	<div class="col-md-6 col-lg-4 menu-wrap">
+        		<div class="heading-menu text-center ftco-animate">
+        			<h3>Breakfast</h3>
+        		</div>
+        		<div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url({% static 'images/breakfast-1.jpg' %});"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>{{ menu.text1 }}</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">kshs.300</span>
+	                </div>
+	              </div>
+	              <p><span>2 eggs any style</span>, <span>crispy bacon or sausage links</span>, <span>and toast</span></p>
+              </div>
+            </div>
+            <div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url({% static 'images/breakfast-2.jpg' %});"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>{{ menu.text2 }}</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">Kshs. 250</span>
+	                </div>
+	              </div>
+	              <p><span>light and fluffy pancakes</span>, <span>serverd with maple syrup</span>, <span>and a choice of berries or bananas</span></p>
+              </div>
+            </div>
+            <div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url({% static 'images/breakfast-3.jpg' %});"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>{{ menu.text3 }}</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">Kshs.200</span>
+	                </div>
+	              </div>
+	              <p><span>A refreshing bowl of blended fruits</span>, <span>topped  granola</span>, <span>nuts</span>, <span>and seeds</span></p>
+              </div>
+            </div>
+        	</div>
+
+        	<div class="col-md-6 col-lg-4 menu-wrap">
+        		<div class="heading-menu text-center ftco-animate">
+        			<h3>Lunch</h3>
+        		</div>
+        		<div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url({% static 'images/lunch-1.jpg' %});"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>{{ menu.text4 }}</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">Kshs.450</span>
+	                </div>
+	              </div>
+	              <p><span>classic pizza with tomato</span>, <span>fresh mozarella</span>, <span>basil</span>, <span>and a drizzle of olive oil.</span></p>
+              </div>
+            </div>
+            <div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url({% static 'images/lunch-2.jpg' %});"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>{{ menu.text5 }}</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">Kshs.400</span>
+	                </div>
+	              </div>
+	              <p><span>Succulent shrimp tossed with garlic</span>, <span>lemon</span>, <span>and herbs</span>, <span>over a bed of pasta</span></p>
+              </div>
+            </div>
+            <div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url({% static 'images/lunch-3.jpg' %});"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>{{ menu.text6 }}</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">Kshs.350</span>
+	                </div>
+	              </div>
+	              <p><span>A refreshing salad mixed with greens</span>, <span>olives, feta cheese</span>, <span>tomatoes</span>, <span>and a lemon vinaigrette</span></p>
+              </div>
+            </div>
+        	</div>
+
+        	<div class="col-md-6 col-lg-4 menu-wrap">
+        		<div class="heading-menu text-center ftco-animate">
+        			<h3>Dinner</h3>
+        		</div>
+        		<div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url({% static 'images/dinner-1.jpg' %});"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>{{ menu.text7 }}</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">Kshs.390</span>
+	                </div>
+	              </div>
+	              <p><span>crisp romaine lettuce</span>, <span>grilled chicken</span>, <span>parmesan cheese</span>, <span>and caesar dressing</span></p>
+              </div>
+            </div>
+            <div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url({% static 'images/dinner-2.jpg' %});"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>{{ menu.text8 }}</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">kshs.500</span>
+	                </div>
+	              </div>
+	              <p><span>Grilled chicken with teriyaki sauce</span>, <span>served with steamed vegetables</span>, <span> and rice</span></p>
+              </div>
+            </div>
+            <div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url({% static 'images/dinner-3.jpg' %});"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>{{ menu.text9 }}</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">kshs.450</span>
+	                </div>
+	              </div>
+	              <p><span>Fresh mozarella</span>, <span>tomato</span>, <span>basil</span>, <span>and balsamic glaze pressed  between slices of ciabatta</span></p>
+              </div>
+            </div>
+        	</div>
+
+        	<!--  -->
+        	<div class="col-md-6 col-lg-4 menu-wrap">
+        		<div class="heading-menu text-center ftco-animate">
+        			<h3>Desserts</h3>
+        		</div>
+        		<div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url({% static 'images/dessert-1.jpg' %});"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>{{ menu.text10 }}</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">kshs.250</span>
+	                </div>
+	              </div>
+	              <p><span>creamy and indulgent cheesecake</span>, <span>with a variety of toppings such as</span>, <span>berry compote</span>, <span>or chocolate ganache</span></p>
+              </div>
+            </div>
+            <div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url({% static 'images/dessert-2.jpg' %});"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>{{ menu.text11 }}</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">kshs.300</span>
+	                </div>
+	              </div>
+	              <p><span>warm apple pie</span>, <span>with a scoop of vanilla ice cream</span></p>
+              </div>
+            </div>
+            <div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url({% static 'images/dessert-3.jpg' %});"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>{{ menu.text12 }}</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">kshs.200</span>
+	                </div>
+	              </div>
+	              <p><span>A rich and gooey chocolate cake with a molten centre </span>, <span>often served with a scoop of either vanilla ice cream </span>, <span>or chocolate ice cream</span>,</p>
+              </div>
+            </div>
+        	</div>
+
+        	<div class="col-md-6 col-lg-4 menu-wrap">
+        		<div class="heading-menu text-center ftco-animate">
+        			<h3>Wine Card</h3>
+        		</div>
+        		<div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url({% static 'images/wine-1.jpg' %});"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>{{ menu.text16 }}</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">Kshs.3500</span>
+	                </div>
+	              </div>
+	              <p><span>Gruner vetliner</span>, <span>Viogner</span>, <span>Zinfandel</span>, </p>
+              </div>
+            </div>
+            <div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url({% static 'images/wine-2.jpg' %});"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>{{ menu.text17 }}</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">kshs.2700</span>
+	                </div>
+	              </div>
+	              <p><span>Sauvignon blanc</span>, <span>chardonnay</span>, <span>pinot grigio</span>, <span>riesling</span></p>
+              </div>
+            </div>
+            <div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url({% static 'images/wine-3.jpg' %});"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>{{ menu.text18 }}</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">kshs.2600</span>
+	                </div>
+	              </div>
+	              <p><span>cabernet sauvignon</span>, <span>merlot</span>, <span>pinot noir</span>, <span>malbec</span></p>
+              </div>
+            </div>
+        	</div>
+
+        	<div class="col-md-6 col-lg-4 menu-wrap">
+        		<div class="heading-menu text-center ftco-animate">
+        			<h3>Drinks</h3>
+        		</div>
+        		<div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url({% static 'images/drink-1.jpg' %});"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>{{ menu.text19 }}</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">kshs.300</span>
+	                </div>
+	              </div>
+	              <p><span>mint</span>, <span>lime</span>, <span>simple syrup</span>, <span> and soda water</span></p>
+              </div>
+            </div>
+            <div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url({% static 'images/drink-2.jpg' %});"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>{{ menu.text20 }}</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">kshs.300</span>
+	                </div>
+	              </div>
+	              <p><span>freshly squeezed lemons</span>, <span>with sugar </span>, <span>and water</span></p>
+              </div>
+            </div>
+            <div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url({% static 'images/drink-3.jpg' %});"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>{{ menu.text21 }}</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">kshs.350</span>
+	                </div>
+	              </div>
+	              <p><span>a blend of assorted fruits</span>, <span>yogurt</span>, <span>and ice</span></p>
+              </div>
+            </div>
+        	</div>
+        </div>
+        <div class="row">
+        	<div class="col-md-12 text-center ftco-animate">
+        		<p><a href="#" class="btn btn-black py-3 px-5">View All Menu</a></p>
+        	</div>
+        </div>
+    	</div>
+
+    </section>
+
+{% endfor %}
+
+{% endblock %}
+
+

@@ -1,0 +1,293 @@
+{% extends 'common.html' %}
+
+{% load static %}
+
+{% block body %}
+
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('{% static 'images/bg_4.jpg' %}');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center" style="background: #ffc4c4">
+            <h1 class="mb-2 bread">About</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>About <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+{% for about in about %}
+		<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="background: #ffc4c4">
+			<div class="container-fluid">
+				<div class="row no-gutters">
+					<div class="col-sm-5 img img-2 d-flex align-items-center justify-content-center justify-content-md-end" style="background-image: url({% static 'images/about.jpg' %}); position: relative">
+                        <iframe width="853" height="600" src="https://www.youtube.com/embed/lTfEm-V75Uo" title="Twisted State Fair Sandwiches!! New York State Fair Goes Too Far!!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{#						<a href="{% static 'videos/flavor fusion.mp4' %}" class="icon-video popup-vimeo d-flex justify-content-center align-items-center">#}
+{#  						<span class="ion-ios-play"></span>#}
+{#  					</a>#}
+					</div>
+					<div class="col-sm-7 wrap-about py-5 ftco-animate">
+	          <div class="heading-section mt-5 mb-4">
+	          	<div class="pl-lg-5 ml-md-5">
+		          	<span class="subheading">{{ about.heading }}</span>
+		            <h2 class="mb-4">{{ about.welcome }}</h2>
+	            </div>
+	          </div>
+	          <div class="pl-lg-5 ml-md-5">
+							<p>{{ about.description }}</p>
+							<h3 class="mt-5">{{ about.special }}</h3>
+							<div class="thumb my-4 d-flex">
+	            	<a href="#" class="thumb-menu pr-md-4 text-center">
+	            		<div class="img" style="background-image: url({% static 'images/lunch-4.jpg' %});"></div>
+	            		<h4>{{ about.text1 }}</h4>
+	            	</a>
+	            	<a href="#" class="thumb-menu pr-md-4 text-center">
+	            		<div class="img" style="background-image: url({% static 'images/lunch-7.jpg' %});"></div>
+	            		<h4>{{ about.text2 }}</h4>
+	            	</a>
+	            	<a href="#" class="thumb-menu pr-md-4 text-center">
+	            		<div class="img" style="background-image: url({% static 'images/lunch-6.jpg' %});"></div>
+	            		<h4>{{ about.text3 }}</h4>
+	            	</a>
+	            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+{% endfor %}
+		<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({% static 'images/bg_4.jpg' %});" data-stellar-background-ratio="0.5">
+    	<div class="container">
+    		<div class="row d-md-flex align-items-center justify-content-center">
+    			<div class="col-lg-10">
+    				<div class="row d-md-flex align-items-center">
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		              <div class="text">
+		                <strong class="number" data-number="18">0</strong>
+		                <span>Years of Experienced</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		              <div class="text">
+		                <strong class="number" data-number="20000">0</strong>
+		                <span>Happy Customers</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		              <div class="text">
+		                <strong class="number" data-number="564">0</strong>
+		                <span>Finished Projects</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		              <div class="text">
+		                <strong class="number" data-number="300">0</strong>
+		                <span>Working Days</span>
+		              </div>
+		            </div>
+		          </div>
+	          </div>
+          </div>
+        </div>
+    	</div>
+    </section>
+
+		<section class="ftco-section"style="background: #ffc4c4" >
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+          	<span class="subheading">Chef</span>
+            <h2 class="mb-4">Our Mater Chef</h2>
+          </div>
+        </div>
+				<div class="row">
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img" style="background-image: url({% static 'images/chef-4.jpg' %});"></div>
+							<div class="text px-4 pt-4">
+								<h3>John Smooth</h3>
+								<span class="position mb-2">CEO, Co Founder</span>
+								<div class="faded">
+									<p>As the CEO of our esteemed restaurant, I proudly highlight our commitment to culinary excellence and customer satisfaction. At our establishment, we prioritize quality ingredients, innovative dishes, and exceptional service. Our team's passion and dedication shine through every plate, creating an unparalleled dining experience. We strive to be a culinary destination where flavors, ambiance, and hospitality converge, leaving a lasting impression on our valued patrons.</p>
+									<ul class="ftco-social d-flex">
+		                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img" style="background-image: url({% static 'images/chef-2.jpg' %});"></div>
+							<div class="text px-4 pt-4">
+								<h3>Rebeca Welson</h3>
+								<span class="position mb-2">Head Chef</span>
+								<div class="faded">
+									<p>As the head chef of this remarkable restaurant, I am honored to lead a team dedicated to culinary creativity and excellence. Our kitchen is a vibrant hub of innovation, where fresh, locally-sourced ingredients come to life in every dish. We take pride in crafting memorable dining experiences, marrying flavors to perfection. With a commitment to quality and a passion for gastronomy, we invite our guests to savor the unique culinary journey we offer.</p>
+									<ul class="ftco-social d-flex">
+		                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img" style="background-image: url({% static 'images/chef-3.jpg' %});"></div>
+							<div class="text px-4 pt-4">
+								<h3>Kharl Branyt</h3>
+								<span class="position mb-2">Chef</span>
+								<div class="faded">
+									<p>In the heart of our kitchen, we blend passion and precision to create an unforgettable culinary experience. As the chef of this remarkable restaurant, I am privileged to helm a team that cherishes quality ingredients and culinary finesse. Our dedication to craft, flavor, and innovation is reflected in every dish we present, inviting diners to indulge in a symphony of tastes that define our gastronomic identity.</p>
+									<ul class="ftco-social d-flex">
+		                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img" style="background-image: url({% static 'images/chef-1.jpg' %});"></div>
+							<div class="text px-4 pt-4">
+								<h3>Luke Simon</h3>
+								<span class="position mb-2">Chef</span>
+								<div class="faded">
+									<p>In the heart of our flavor fusion, I am privileged to serve as the chef, curating an enticing menu that reflects our dedication to flavor and quality. Our kitchen is a dynamic space where creativity and craftsmanship converge to produce extraordinary dishes. With a commitment to culinary excellence, I invite patrons to indulge in an unforgettable dining experience, where each plate tells a story of passion and innovation.</p>
+									<ul class="ftco-social d-flex">
+		                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+    <section class="ftco-section testimony-section" style="background-image: url({% static 'images/bg_5.jpg' %});" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+          	<span class="subheading">Testimony</span>
+            <h2 class="mb-4">Happy Customer</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate justify-content-center">
+          <div class="col-md-7">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              <div class="item">
+                <div class="testimony-wrap text-center py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url({% static 'images/person_1.jpg' %})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text p-3">
+                    <p class="mb-4">As a self-proclaimed food enthusiast, I always seek out establishments that not only promise exceptional flavors but also deliver an experience to remember. Flavor Fusion did just that, and more.</p>
+                    <p class="name">Arthur Browner</p>
+                    <span class="position">Satisfied Customer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap text-center py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url({% static 'images/person_2.jpg' %})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text p-3">
+                    <p class="mb-4">Now, let's talk about the star of the show – the food. The menu, a carefully curated selection of culinary delights, showcased a commitment to using fresh, local ingredients. Each dish was a masterpiece, a symphony of flavors that danced on my palate. The chef's creativity and expertise shone through in every bite. Flavor fusion restaurant is the place to be!</p>
+                    <p class="name">James Derick</p>
+                    <span class="position">Satisfied Customer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap text-center py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url({% static 'images/person_3.jpg' %})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text p-3">
+                    <p class="mb-4">From the moment I stepped into Flavor Fusion restaurant, I knew I was in for a treat. The inviting ambiance, a perfect blend of modern elegance and cozy warmth, set the stage for what would turn out to be an extraordinary culinary journey.</p>
+                    <p class="name">Jakes Anthony</p>
+                    <span class="position">Satisfied Customer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap text-center py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url({% static 'images/person_4.jpg' %})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text p-3">
+                    <p class="mb-4">
+                        My recent dining experience at Flavor Fusion Restaurant was nothing short of extraordinary. From the moment I walked in, the warm ambiance enveloped me, setting the stage for an unforgettable meal. The menu was a symphony of flavors, each dish a culinary masterpiece. The staff's attentiveness added to the charm, making me feel like a valued guest. If you seek culinary bliss, look no further.</p>
+                    <p class="name">Ray Mike</p>
+                    <span class="position">Satisfied Customer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap text-center py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url({% static 'images/person_3.jpg' %})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text p-3">
+                    <p class="mb-4">Exceptional flavors and impeccable service define my dining experience at Flavor Fusion. From the warm welcome to the exquisite presentation of each dish, every detail spoke volumes about their commitment to culinary excellence.
+ The staff's attentiveness and knowledge, coupled with a perfect wine pairing, elevated the evening. A hidden gem that exceeds expectations, Flavor Fusion is a haven for food enthusiasts. Without a doubt, I'll be returning to relish the delightful fusion of flavors that make this restaurant a standout in every way.</p>
+                    <p class="name">John Peter</p>
+                    <span class="position">Satisfied Customer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+		<section class="ftco-section" style="background: #ffc4c4">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+          	<span class="subheading">More Healthy Foods</span>
+            <h2 class="mb-4">We Love Healthy and Natural Foods</h2>
+            <p>Embracing a lifestyle that prioritizes health and wellness, the allure of loving healthy and natural foods has become a cornerstone of contemporary living. In a world where well-being takes center stage, the love for nutrient-rich, unprocessed foods is not just a trend but a conscious choice. From vibrant farmers' markets to mindful grocery selections, individuals are gravitating towards fresh produce, whole grains, and organic options. This affection for healthy eating is driven by a desire for vitality, longevity, and a connection to nature. Choosing nutrient-dense foods not only nourishes the body but also fosters a deep appreciation for the symbiotic relationship between nutrition and overall well-being.</p>
+            <p><a href="reservation.html" class="btn btn-primary px-4 py-3">Book A Table</a></p>
+          </div>
+        </div>
+			</div>
+		</section>
+
+{% endblock %}
+
+
+
